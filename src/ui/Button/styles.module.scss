@@ -1,0 +1,23 @@
+.button {
+  margin: 0;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  &.primary {
+    background: rgb(64, 64, 231);
+    color: #ffffff;
+  }
+
+  &.danger {
+    background: rgb(196, 40, 40);
+    color: #ffffff;
+  }
+}
