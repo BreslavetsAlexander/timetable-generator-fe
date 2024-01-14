@@ -1,0 +1,32 @@
+.header {
+  background: #1f2937;
+  color: #ffffff;
+  padding: 16px 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 0 8px;
+}
+
+.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
