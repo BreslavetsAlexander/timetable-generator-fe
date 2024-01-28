@@ -12,24 +12,22 @@ export const Login: FC = () => {
   };
 
   return (
-    <div className={styles.wrap}>
-      <div className={styles.formWrap}>
-        <h1 className={styles.title}>Login</h1>
-        <Formik<FormValues> initialValues={INITIAL_VALUES} onSubmit={onSubmit}>
-          <Form>
-            <FormInput name={INPUT_NAMES.username} placeholder='username' />
-            <FormInput
-              name={INPUT_NAMES.password}
-              placeholder='password'
-              type='password'
-              className={styles.password}
-            />
-            <Button className={styles.submitButton} type='submit' block primary>
-              Login
-            </Button>
-          </Form>
-        </Formik>
-      </div>
+    <div className={styles.formWrap}>
+      <h1 className={styles.title}>Login</h1>
+      <Formik<FormValues> initialValues={INITIAL_VALUES} onSubmit={onSubmit}>
+        <Form>
+          <FormInput name={INPUT_NAMES.username} placeholder='username' />
+          <FormInput
+            name={INPUT_NAMES.password}
+            placeholder='password'
+            type='password'
+            className={styles.password}
+          />
+          <Button className={styles.submitButton} type='submit' block primary>
+            Login
+          </Button>
+        </Form>
+      </Formik>
     </div>
   );
 };
