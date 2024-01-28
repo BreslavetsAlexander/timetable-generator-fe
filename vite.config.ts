@@ -14,6 +14,8 @@ export default ({ mode }) => {
       alias: {
         '@ui': path.resolve(__dirname, 'src', 'ui'),
         '@utils': path.resolve(__dirname, 'src', 'utils'),
+        '@definitions': path.resolve(__dirname, 'src', 'definitions'),
+        '@services': path.resolve(__dirname, 'src', 'services'),
       },
     },
     plugins: [react()],

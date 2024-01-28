@@ -2,12 +2,13 @@ import { FC } from 'react';
 import { Button, FormInput } from '@ui';
 import { Formik, Form } from 'formik';
 import { INITIAL_VALUES, INPUT_NAMES } from './constants';
+import { AuthService } from '@services';
 import { FormValues } from './types';
 import styles from './styles.module.scss';
 
 export const Login: FC = () => {
   const onSubmit = (values: FormValues) => {
-    console.log(values);
+    AuthService.login(values).then(console.log);
   };
 
   return (

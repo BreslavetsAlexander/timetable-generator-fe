@@ -3,7 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@ui": ["src/ui"],
-      "@utils": ["src/utils"]
+      "@utils": ["src/utils"],
+      "@definitions": ["src/definitions"],
+      "@services": ["src/services"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,
