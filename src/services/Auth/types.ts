@@ -1,6 +1,6 @@
 import { IUser } from '@definitions';
 
-export interface ILoginResponse {
+export interface IAuthResponse {
   user: IUser;
   token: string;
 }

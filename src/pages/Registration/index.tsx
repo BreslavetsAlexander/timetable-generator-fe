@@ -10,12 +10,12 @@ import { AuthService } from '@services';
 import { FormValues } from './types';
 import styles from './styles.module.scss';
 
-export const Login: FC = () => {
+export const Registration: FC = () => {
   const { setCurrentUser } = useCurrentUserContext();
   const navigate = useNavigate();
 
   const onSubmit = (values: FormValues) => {
-    AuthService.login(values).then((response) => {
+    AuthService.register(values).then((response) => {
       setCurrentUser(response.user);
       localStorage.setItem(TOKEN_LOCAL_STORAGE_KEY, response.token);
       navigate(ROUTES.HOME);
@@ -24,20 +24,34 @@ export const Login: FC = () => {
 
   return (
     <div className={styles.formWrap}>
-      <h1 className={styles.title}>Login</h1>
+      <h1 className={styles.title}>Register</h1>
       <Formik<FormValues> initialValues={INITIAL_VALUES} onSubmit={onSubmit}>
         <Form>
-          <FormInput name={INPUT_NAMES.username} placeholder='username' />
+          <FormInput
+            name={INPUT_NAMES.firstName}
+            placeholder='firstName'
+            className={styles.formInput}
+          />
+          <FormInput
+            name={INPUT_NAMES.lastName}
+            placeholder='firstName'
+            className={styles.formInput}
+          />
+          <FormInput
+            name={INPUT_NAMES.username}
+            placeholder='username'
+            className={styles.formInput}
+          />
           <FormInput
             name={INPUT_NAMES.password}
             placeholder='password'
             type='password'
-            className={styles.password}
+            className={styles.formInput}
           />
           <Button className={styles.submitButton} type='submit' block primary>
-            Login
+            Register
           </Button>
-          <Link to={ROUTES.REGISTER}>or register</Link>
+          <Link to={ROUTES.LOGIN}>or login</Link>
         </Form>
       </Formik>
     </div>

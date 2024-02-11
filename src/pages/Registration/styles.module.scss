@@ -1,0 +1,22 @@
+.formWrap {
+  min-width: 500px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.formInput {
+  margin: 0;
+
+  & + & {
+    margin: 16px 0 0;
+  }
+}
+
+.submitButton {
+  margin: 20px 0 0;
+}
