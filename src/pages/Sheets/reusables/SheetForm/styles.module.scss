@@ -1,0 +1,15 @@
+.form {
+  margin: 20px 0 0;
+}
+
+.input {
+  margin: 0;
+
+  & + & {
+    margin: 8px 0 0;
+  }
+}
+
+.submitButton {
+  margin: 16px 0 0;
+}
